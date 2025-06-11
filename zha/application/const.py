@@ -12,6 +12,7 @@ import zigpy_deconz.zigbee.application
 import zigpy_xbee.zigbee.application
 import zigpy_zigate.zigbee.application
 import zigpy_znp.zigbee.application
+import zigpy_blz.zigbee.application
 
 ATTR_ACTIVE_COORDINATOR = "active_coordinator"
 ATTR_ARGS = "args"
@@ -121,6 +122,10 @@ class RadioType(enum.Enum):
     xbee = (
         "XBee = Digi XBee Zigbee radios: Digi XBee Series 2, 2C, 3",
         zigpy_xbee.zigbee.application.ControllerApplication,
+    )
+    blz = (
+        "BLZ = Bouffalo Lab Zigbee raidos: BL702/4/6",
+        zigpy_blz.zigbee.application.ControllerApplication,
     )
 
     @classmethod
